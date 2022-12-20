@@ -1,0 +1,153 @@
+#ModalFormSign {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    z-index: 150;
+    display: none;
+    margin: -150px 0 0 -150px;
+    width: 350px;
+    height: 220px;
+    overflow: auto;
+
+    border: 1px solid black;
+    background-color: mintcream;
+    border-radius: 20px;
+}
+
+#ModalFormLog{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    z-index: 150;
+    display: none;
+    margin: -150px 0 0 -150px;
+    width: 350px;
+    height: 180px;
+    overflow: auto;
+
+    border: 1px solid black;
+    background-color: mintcream;
+    border-radius: 20px;
+}
+
+#ModalFormRules {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    z-index: 150;
+    display: none;
+    margin: -400px 0 0 -470px;
+    width: 1200px;
+    height: 700px;
+    overflow: auto;
+
+    border: 1px solid black;
+    background-color: mintcream;
+    border-radius: 20px;
+}
+
+#ModalFormJoin {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    z-index: 150;
+    display: none;
+    margin: -150px 0 0 -150px;
+    width: 350px;
+    height: 180px;
+    overflow: auto;
+
+    border: 1px solid black;
+    background-color: mintcream;
+    border-radius: 20px;
+}
+
+#ModalFormCreate {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    z-index: 150;
+    display: none;
+    margin: -150px 0 0 -150px;
+    width: 350px;
+    height: 180px;
+    overflow: auto;
+
+    border: 1px solid black;
+    background-color: mintcream;
+    border-radius: 20px;
+}
+
+#filterSign, #filterLog, #filterRules, #filterJoin, #filterCreate {
+    background-color:rgba(0,0,0,0.5) ;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    display: none;
+}
+
+.h1Sign {
+    margin-left: 15px;
+}
+
+.inpSign {
+    display: inline;
+    margin-right: 30px;
+    float: right;
+}
+
+.butSign {
+    margin: 10px;
+}
+
+.Aim {
+    position: absolute;
+    border: none;
+    background: none;
+    width: 260px;
+    margin-left: 20px;
+}
+
+.Podgotovka {
+    position: absolute;
+    margin-left: 280px;
+    border: none;
+    background: none;
+    width: 500px;
+}
+.Konec {
+    margin-left: 790px;
+}
+
+.Hod {
+    margin-left: 20px;
+}
+
+.Kol_Igrokov_2 {
+    margin-left: 20px;
+}
+
+.Kol_Igrokov_3 {
+    margin-left: 20px;
+}
+
+.Kol_Igrokov_7 {
+    margin-left: 20px;
+}
+
+.kol {
+    line-height: 1.5;
+}

@@ -1,0 +1,206 @@
+* {
+    margin: 0px;
+    font-family: "Times New Roman";
+    box-sizing: border-box;
+}
+
+body {
+    transition: all ease 1s;
+}
+
+.c-hambg {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    height: 100px;
+    font-size: 0;
+    border:none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.new-game, .join-game, .rules-game, .home{
+    width: 200px;
+    margin: 4px;
+    padding: 4px;
+    font-size: 24px;
+    background: none;
+    font-family: "Times New Roman";
+    border-radius: 20px;
+}
+
+.log-game, .reg-game {
+    width: 100px;
+    margin-top: 4px;
+    margin-left: 3px;
+    font-size: 20px;
+    background: none;
+    font-family: "Times New Roman";
+    border-radius: 20px;
+}
+.pusto {
+    width: 100px;
+    margin-top: 4px;
+    margin-left: 3px;
+    border: none;
+    background: none;
+}
+
+.clock{
+    font-family: "Times New Roman";
+    font-size: 50px;
+    position: absolute;
+    top: 90%;
+    left: 6%;
+}
+
+.c-hambg:focus{
+    outline: none;
+}
+.c-hambg span{
+    display: block;
+    position: absolute;
+    top: 45px;
+    left: 14px;
+    right: 14px;
+    height: 10px;
+    background: white;
+}
+.c-hambg span::before, .c-hambg span::after{
+    display: block;
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 10px;
+    background: white;
+    content: "";
+}
+.c-hambg span::before{
+    top: -20px;
+}
+.c-hambg span::after{
+    top: +20px;
+}
+
+.c-hambg-line{
+    background: #59ea57;
+}
+
+.c-hambg-line span{
+    transition: background 0s 0.3s;
+}
+
+.c-hambg-line span::before, .c-hambg-line span::after{
+    transition-duration: 0.4s, 0.4s;
+    transition-delay: 0.4s, 0s;
+}
+
+.c-hambg-line span::before {
+    transition-property: top, transform;
+}
+
+.c-hambg-line span::after {
+    transition-property: top, transform;
+}
+
+.c-hambg-line.is-active {
+    background: darkred;
+}
+
+.c-hambg-line.is-active span{
+    background: none;
+}
+
+.c-hambg-line.is-active span::before{
+    top:0;
+    transform: rotate(-45deg);
+}
+
+.c-hambg-line.is-active span::after{
+    top:0;
+    transform: rotate(45deg);
+}
+
+.c-hambg-line.is-active span::before, .c-hambg-line.is-active span::after{
+    transition-delay: 0s, 0.4s;
+}
+
+#menu {
+    width: 340px;
+    margin-left: -240px;
+    background: mintcream;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: all ease 1s;
+    z-index: 9999;
+}
+
+
+
+.zag1{
+    font-family: "Times New Roman";
+    left: 45%;
+}
+
+.pict1 {
+    margin-top: 2%;
+    right: 2%;
+    width: 200px;
+    height: auto;
+}
+
+.pict2 {
+    width: auto;
+    height: 600px;
+}
+
+.block-1 {
+    display: block;
+    position: absolute;
+    width: 500px;
+    border: none;
+    background: none;
+    margin-top: 2%;
+    margin-left: 14%;
+    text-align: justify-all;
+    font-family: Georgia;
+    font-size: 25px;
+}
+
+.block-2 {
+    float: right;
+    position: absolute;
+    width: 500px;
+    border:none;
+    margin-top: 2%;
+    margin-left: 45%;
+}
+
+.peshki {
+    text-align: justify-all;
+    font-family: Georgia;
+    font-size: 25px;
+}
+
+
+.conter {
+    width: 80%;
+    min-width: 1000px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.body-active {
+    margin-left: 300px;
+}
+
+#menu.nav-active {
+    margin-left: 0;
+}

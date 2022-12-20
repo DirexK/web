@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <title>Games</title>
+</head>
+<body>
+    <div id="menu">
+        <img class="pict1" src="Material/logo.png">
+        <button class="c-hambg c-hambg-line">
+            <span>Menu</span>
+        </button>
+        <form action="index.html">
+        <button class="home" >
+            Home
+        </button>
+        </form>
+        <button class="new-game" onclick="showCreate('block')">
+            Create a room
+        </button>
+        <div id="filterCreate" onclick="showCreate('none')"></div>
+        <div id="ModalFormCreate">
+            <form action="lobby.html">
+                <h1 class="h1Sign" title="Form Create">Create game</h1>
+                <div class="group">
+                    <label class="h1Sign"  for="">Name game</label>
+                    <input class="inpSign" type="text">
+                    <label class="h1Sign"  for="">Number of players</label>
+                    <select class="kol" >
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="8" disabled="" style="display: none;">5</option>
+                    </select>
+                    <center><button>Create</button></center>
+                </div>
+            </form>
+        </div>
+        <button class="join-game" onclick="showJoin('block')">
+            Join a room
+        </button>
+        <div id="filterJoin" onclick="showJoin('none')"></div>
+        <div id="ModalFormJoin">
+            <form action="">
+                <h1 class="h1Sign" title="Form Join">Join game</h1>
+            </form>
+        </div>
+        <button class="rules-game" onclick="showRules('block')">
+            Rules
+        </button>
+        <div id="filterRules" onclick="showRules('none')"></div>
+        <div id="ModalFormRules">
+            <form action="">
+                <center>
+                    <h1 class="h1Sign" title="Form rules">Rules</h1>
+                </center>
+                <div class="RulesBlock">
+                    <div class="Aim">
+                    <h1>Цель игры</h1>
+                        В цитаделях, вы и ваши противники играете лидеров конкерирубщих городов,
+                    увеличивающих их процветание, за счёт строительства
+                    новых районов, и игроки посчиттают очки, основанные на районах, остроенных в их городах.
+                    Игрок, набравший больее количество очков объявляеться победителем.
+                    </div>
+                    <div class="Podgotovka">
+                        <h1>Подготовка к основной игре</h1>
+                        <p>1. Прежде, чем игра начнется, удалите все дополнительные карты персонажей из игры.<br>
+                        2. Перетасуйте восемь оставшихся карт персонажей и поместите их в одну колоду. Эта колода называется колодой персонажей.<br>
+                        3. Перетасуйте карты районов и сложите вместе в другую колоду. Эта колода называется колодой районов.<br>
+                        4. Раздайте каждому игроку по четыре карты районов.<br>
+                        5. Каждый игрок получает два золота из банка.<br>
+                        6. Самый старший игрок получает корону.<br></p>
+                    </div>
+                    <div class="Konec">
+                        <h1>Конец игры</h1>
+                        Когда игрок отстроит восьмой район, он заканчивает раунд. Игра заканчивается в конце этого раунда. В конце игры, каждый игрок получает очки следующим образом (вы можете использовать фишки очков, чтобы упростить подсчет).<br>
+                        • Очки равняются общей стоимости всех районов в городе игрока.<br>
+                        • + 3 пункта, если игрок имеет районы каждого из пяти цветов.<br>
+                        • +4 для первого игрока, который построил восьмой район.<br>
+                        • +2 для каждого последующего игрока, который построил восьмой район.
+                    </div>
+                    <div class="Hod">
+                        <h1>Ход</h1>
+                        <p>Ход
+                            В свой ход, вы должны сначала совершить действие, а затем может построить район, сыграв соответствующей картой.<br>
+                            1) Совершение действия.<br>
+                            В свой ход, вы должны либо<br>
+                            • взять два золота из банка,<br>
+                            • или вытянуть две карты из колоды районов,
+                            затем выбрать одну карту, чтобы оставить ее у себя в руке,
+                            а другую поместить в низ колоды районов.<br>
+                            2) Постройка района.<br>
+                            Вы можете построить один район в вашем городе (то есть играйте картой с вашей руки и положите ее на стол перед собой).
+                            Чтобы построить район, вы должны заплатить его стоимость в золоте, в банк. Вы можете не строить район, если вы того пожелаете.
+                            Вы не можете иметь два идентичных района (два замка, два рынка, и т.д.) в вашем городе.
+                            Каждый персонаж также имеет свои особенности. Вы можете использовать особенности вашего персонажа один раз в течение вашего хода.
+                            Возможности каждого персонажа указаны на картах.
+                        </p>
+                    </div>
+                        <div class="Kol_Igrokov_2">
+                            <h1>Игра вдвоем</h1>
+                            1. Игрок, который имеет корону (Игрок A), берет колоду персонажей, снимает верхнюю карту, кладет ее на центр стола картинкой вниз, не смотря ее значение, и тайно выбирает из колоды одного персонажа. Далее, он отдает оставшиеся шесть карт другому игроку (игрок B).
+                            2. Игрок Б выбирает одну карту из колоды персонажей для себя, и выбирает другую карту, чтобы положить ее картинкой вниз в центре стола. Далее он отдает оставшиеся четыре
+                            карты Игроку А.
+                            3. Игрок А берет одну из этих четырех карт себе, одну кладет картинкой вниз в центре стола, и отдает последние две карты Игроку Б.
+                            4. Игрок Б берет одну карту себе и размещает последнюю карту картинкой вниз в центре стола.
+                          </div>
+                        <div class="Kol_Igrokov_3">
+                        <h1>Игра для троих игроков</h1>
+                        Игрок, который имеет корону, берет карту персонажей, снимает верхнюю карту, кладет ее на центр стола картинкой вниз, не смотря ее значение, и тайно выбирает из колоды одного персонажа. Далее он отдает оставшиеся карты игроку, сидящему слева. Тот в свою очередь выбирает одну карту и передает оставшуюся колоду следующему игроку. Эта процедура продолжается до тех пор, пока каждый игрок не выберет две карты. Последний игрок выбирает себе карту из двух оставшихся карт, и помещает последнюю карту картинкой вниз в центре стола.
+                        </div>
+                        <div class="Kol_Igrokov_7">
+                            <h1>Игра для семи игроков</h1>
+                            Во время “Выбора персонажей”, когда седьмой игрок получает одну карту от шестого игрока, он также берет со стола карту, выложенную картинкой вниз, и выбирает одну карту. Вторую карту игрок помещает картинкой вниз в центре стола.
+                        </div>
+                </div>
+            </form>
+        </div>
+        <button class="pusto">
+        </button>
+        <button class="log-game" onclick="showLog('block')">
+            Log In
+        </button>
+        <div id="filterLog" onclick="showLog('none')"></div>
+        <div id="ModalFormLog">
+            <form action="">
+                <h1 class="h1Sign" title="Form log in">Log In</h1>
+                <div class="group">
+                    <label class="h1Sign"  for="">Name</label>
+                    <input class="inpSign" type="text">
+                </div>
+                <div class="group">
+                    <label class="h1Sign"  for="">Password</label>
+                    <input class="inpSign" type="password">
+                </div>
+                <div class="group">
+                    <center><button class="butSign">Log In</button></center>
+                </div>
+            </form>
+        </div>
+        <button class="reg-game" onclick="showSign('block')">
+            Sign Out
+        </button>
+        <div id="filterSign" onclick="showSign('none')"></div>
+        <div id="ModalFormSign">
+            <form action="">
+                <h1 class="h1Sign" title="Form sign out">Sign Out</h1>
+                <div class="group">
+                    <label class="h1Sign"  for="">Name</label>
+                    <input class="inpSign" type="text">
+                </div>
+                <div class="group">
+                    <label class="h1Sign"  for="">Email</label>
+                    <input class="inpSign" type="email">
+                </div>
+                <div class="group">
+                    <label class="h1Sign"  for="">Password</label>
+                    <input class="inpSign" type="password">
+                </div>
+                <div class="group">
+                        <center><button class="butSign">Sign Out</button></center>
+                </div>
+            </form>
+        </div>
+        <div class="clock"></div>
+
+
+    </div>
+    <div class="conter">
+        <main>
+            <h1 class="zag1">Настольная игра "Цитадели" </h1>
+            <div class="block-1"><p class="peshki">«Цитадели» — настольная игра немецкого стиля,
+                разработанная Бруно Файдутти (англ. Bruno Faidutti).</p>
+                <p class="peshki">Впервые она была опубликована во Франции в 2000 под именем «Citadelles»,
+                    позже в Германии под именем «Ohne Furcht und Adel» (нем., «Без страха и благородства»).</p>
+                <p class="peshki">Игра входит в топ-200 лучших настольных игр по рейтингу сайта «BoardGameGeek» (англ. BoardGameGeek).</p>
+                <p class="peshki">На русском языке издаётся компанией «Мир Хобби».</p>
+                <p class="peshki">Играйте со своими друзьями в игре и получите должность главного "правителя"</p></div>
+            <div class="block-2">
+                <img class="pict2" src="Material/citad.png">
+            </div>
+        </main>
+    </div>
+<!--<div id="ModalForm">
+    <form action="">
+        <h1 title="Form sign out">Sign Out</h1>
+        <div class="group">
+            <label for="">Name</label>
+            <input type="text">
+        </div>
+        <div class="group">
+            <label for="">Password</label>
+            <input type="password">
+        </div>
+        <div class="group">
+            <center><button>Sign Out</button></center>
+        </div>
+    </form>
+</div>-->
+    <script src="Script.js"></script>
+    <script src="modal.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
